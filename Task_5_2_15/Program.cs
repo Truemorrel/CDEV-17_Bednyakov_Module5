@@ -6,16 +6,17 @@ namespace Task_5_2_15
     {
         static void Main(string[] args)
         {
-            var result = SortArr(GetArrayFromConsole());
+            var array = GetArrayFromConsole();
+            var sortedarray = SortArray(array);
 
-            for (int i = 0; i < result.Length - 1; i++)
+            for (int i = 0; i < sortedarray.Length - 1; i++)
             {
-                Console.Write(result[i] + " ");
+                Console.Write(sortedarray[i] + " ");
             };
-            Console.WriteLine(result[result.Length - 1]);
+            Console.WriteLine(sortedarray[sortedarray.Length - 1]);
             Console.ReadKey();
         }
-        static int[] SortArr(int[] arr)
+        static int[] SortArray(int[] arr)
         {
             for (int i = 0; i < arr.Length; i++)
             {

@@ -13,20 +13,15 @@ namespace Task_5_2_17
 
         private static void ShowArray(int[] arr, bool isToSort)
         {
-            int[] result;
             if (isToSort)
             {
-                result = SortArray(arr);
-            }
-            else
-            {
-                result = arr;
+                arr = SortArray(arr);
             };
-            for (int i = 0; i < result.Length - 1; i++)
+            for (int i = 0; i < arr.Length - 1; i++)
             {
-                Console.Write(result[i] + " ");
+                Console.Write(arr[i] + " ");
             };
-            Console.WriteLine(result[result.Length - 1]);
+            Console.WriteLine(arr[arr.Length - 1]);
         }
 
         static int[] SortArray(int[] arr)
