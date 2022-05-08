@@ -4,10 +4,10 @@ namespace Task_5_2_2
 {
     internal class Program
     {
-            static string ShowColor(string username, int userage)
+        static void ShowColor(string username, int userage, params string[] favColor)
+        {
+            foreach(var color in favColor)
             {
-                Console.WriteLine($"{username}, {userage} лет\nНапишите свой любимый цвет на английском с маленькой буквы\n");
-                var color = Console.ReadLine();
                 switch (color)
                 {
                     case "red":
@@ -37,8 +37,8 @@ namespace Task_5_2_2
                         Console.WriteLine("Your color is yellow!");
                         break;
                 }
-                return color;
             }
+        }
         static void Main(string[] args)
         {
 
@@ -56,13 +56,16 @@ namespace Task_5_2_2
 
             for (int i = 0; i < 3; i++)
             {
-                favColor[i] = ShowColor( person.name, person.age);
+                Console.WriteLine($"{person.name}, {person.age} лет\nНапишите свой любимый цвет на английском с маленькой буквы\n");
+                favColor[i] = Console.ReadLine();
             }
+            ShowColor(person.name, person.age, favColor);
+
             foreach (var fav in favColor)
             {
                 Console.WriteLine(fav);
             }
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
