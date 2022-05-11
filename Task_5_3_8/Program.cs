@@ -1,12 +1,13 @@
 ﻿using System;
 
-namespace Task_5_2_17
+namespace Task_5_3_8
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            var result = GetArrayFromConsole();
+            int lenArr = 10;
+            var result = GetArrayFromConsole(out lenArr);
             ShowArray(result, true);
             Console.ReadKey();
         }
@@ -41,8 +42,9 @@ namespace Task_5_2_17
             }
             return arr;
         }
-        static int[] GetArrayFromConsole(int num = 5)
+        static int[] GetArrayFromConsole(out int num)
         {
+            num = 6;
             var inputArr = new int[num];
 
             for (int i = 0; i < num; i++)
@@ -52,6 +54,5 @@ namespace Task_5_2_17
             }
             return inputArr;
         }
-
     }
 }

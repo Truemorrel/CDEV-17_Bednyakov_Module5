@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Task_5_2_17
+namespace Task_5_2_18
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            var result = GetArrayFromConsole();
+            var result = GetArrayFromConsole(10);
             ShowArray(result, true);
             Console.ReadKey();
         }
@@ -52,6 +52,5 @@ namespace Task_5_2_17
             }
             return inputArr;
         }
-
     }
 }
